@@ -20,7 +20,8 @@ const getEvForBet = (betPercent) => {
   calculateEndState(startingValueCents);
   //average the end states
   const expectedEV =
-    potentialEndStates.reduce((a, b) => a + b) / potentialEndStates.length;
+    potentialEndStates.reduce((a, b) => a + b) / potentialEndStates.length; //mean
+  //potentialEndStates[potentialEndStates.length / 2]; //median (50 percentile)
   return { potentialEndStates, expectedEV, betPercent };
 };
 
